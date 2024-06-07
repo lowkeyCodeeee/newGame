@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/BackgroundDesign/designs.css">
+    <link rel="stylesheet" href="home.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="/trailingMouseEffect/trailsEffect.css">
+
+</head>
+
+
+
+<body id="background">
+
+
+    <audio autoplay loop>
+        <source src="/GameSounds/loginSounds/mixkit-sicilian-coffee-613.mp3" type="audio/mpeg">
+        <source src="/GameSounds/loginSounds/mixkit-sicilian-coffee-613.mp3" type="audio/ogg">
+    </audio>
+
+    <section id="section" class="head">
+        <h1 class="guides"><a target="_self" href="/Home/Guides/guide.html">Guides</a></h1>
+    </section>
+
+    <div id="body" class="body">
+        <div class="difficulties">
+            <a target="_self" href="/Home/Hard/hard.html">
+                <section id="hard" class="hard">Hard</section>
+            </a>
+            <a target="_self" href="/Home/Easy/easy.html" class="section-2">
+                <section id="easy" class="easy">Easy</section>
+            </a>
+            <a target="_self" href="/Home/Medium/medium.html" class="section-3">
+                <section id="medium" class="medium">Medium</section>
+            </a>
+        </div>
+
+
+        <div id="description" class="description">
+            <div id="content" class="contents">
+                <p id="page"></p>
+            </div>
+            <div class="contents">
+                <p id="score"></p>
+            </div>
+            <div class="contents"><span> <a id="go" class="goButton" class="go" href="/Home/Easy/easy.html">
+                        Go</a></span></div>
+            <div class="contents"><span> <a id="go" class="go" href="/Login/login.html"> Exit </a></span></div>
+
+            <!--
+   /Login/login.html
+  
+-->
+
+        </div>
+
+        <div id="boardsBackground" class="leaderboards">
+            <a id="leaderboards" class="boards">
+                <h1>2</h1>
+                <h1>1</h1>
+                <h1>3</h1>
+            </a>
+        </div>
+
+
+    </div>
+
+
+
+    <div id="leaderboardDisplay" class="leaderboardDisplay">
+        <h1>Leader Board</h1>
+        <p>hdhdfhdhf</p>
+        <p>hdhdfhdhf</p>
+        <p>hdhdfhdhf</p>
+        <p>hdhdfhdhf</p>
+        <button onclick="goBackFromHome()">Back</button>
+
+        <script src="home.js"></script>
+        <script>
+
+            let displayScore = document.getElementById('score');
+
+            let chemScore = localStorage.getItem('chemScore');
+            let simpleQuizScore = localStorage.getItem('simpleQuizTotal');
+            // programming score
+            let score = localStorage.getItem('scoreprog');
+
+            // get the total score of easy games
+            function getTotalScore() {
+                let total = localStorage.getItem('easyTotal');
+                return total;
+            }
+
+            if (getTotalScore() === null) {
+                displayScore.textContent =
+                    `You didnt play yet, your score: 0/90
+                 Play all the game to calculate your total score`;
+            }
+            else if (chemScore !== null && simpleQuizScore !== null && score !== null) {
+                displayScore.textContent = `Your score: ${getTotalScore()} / 90`
+            }
+            else {
+                displayScore.textContent = `Complete the game to get gain more points`;
+            }
+
+        </script>
+        <script src="/trailingMouseEffect/trailingMouse.js"></script>
+        <script src="touchSound.js"></script>
+
+
+        <!--
+i need to connect this script code in home.js
+do those condition in there connect in to the other event
+
+
+-->
+
+
+
+</body>
+
+
+</html>

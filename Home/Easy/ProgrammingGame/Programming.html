@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is Programming game</title>
+    <link rel="stylesheet" href="/BackgroundDesign/designs.css">
+    <link rel="stylesheet" href="/trailingMouseEffect/trailsEffect.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: var(--backgroundColor);
+
+        }
+
+        .languageSelect {
+            margin-top: 40px;
+            width: 100%;
+            height: 150px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: none;
+        }
+
+        main {
+            width: 100%;
+            height: 600px;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: none;
+        }
+
+        .languageSelect>div {
+            width: 145px;
+            height: 145px;
+            transition: opacity 0.3s linear;
+            background-color: none;
+        }
+
+        img {
+            border-radius: 20px;
+        }
+
+        img:hover {
+            box-shadow: 1px 1px 5px rgb(255, 255, 255);
+            cursor: pointer;
+
+        }
+
+        .languageSelect:hover> :not(:hover) {
+            opacity: 0.2;
+        }
+
+        section {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            border: .2px solid white;
+            border-radius: 15px;
+            height: 200px;
+            width: 600px;
+        }
+
+
+        #go {
+            padding: 1.3em 3em;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            color: #000;
+            background-color:rgb(3, 174, 210);
+            border: none;
+            border-radius: 15px;
+            box-shadow: 3px 3px 7px rgba(25, 24, 24, 0.803);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+        }
+
+        #go:hover {
+            background-color: rgb(253, 222, 85);
+            box-shadow: 0px 15px 20px rgb(255, 255, 255);
+            color: #fff;
+            transform: translateY(-7px);
+        }
+
+        #go:active {
+            transform: translateY(-1px);
+        }
+        a{
+            text-decoration: none;
+            display: inline-block;
+        }
+        .descriptions{
+            color: white;
+            font-size: 35px;
+            font-weight: 500;
+        }
+       
+
+    </style>
+</head>
+
+<body>
+    <header class="languageSelect" id="languageSelect">
+
+        <div id="js" class="Javascript">
+            <img src="..\gamesImg\JavaScript_Logo.png" width="145px" height="145px">
+        </div>
+
+        <div id="py" class="Python">
+            <img src="..\gamesImg\python-logo-4k-i6.jpg" width="145px" height="145px">
+        </div>
+
+        <div id="cpp" class="C++">
+            <img src="..\gamesImg\technology-programming-c-coding-wallpaper-thumb.jpg" width="145px" height="145px">
+        </div>
+        <div id="java" class="Java">
+            <img src="..\gamesImg\R.png" width="145px" height="145px">
+        </div>
+
+        <div id="cSharp" class="c#">
+            <img src="..\gamesImg\OIP (13).jpg" width="145px" height="145px">
+        </div>
+    </header>
+    <!--
+-->
+    <main>
+        <section>
+            <h1 class="descriptions">Select the languge you are familiar with</h1>
+            <div class="contents"><span> <a id="go" class="go" href="../easy.html">Back</a></span></div>
+<!--
+ --next thing to do tommorow is to add some effects in the buttons of choices
+ -- and some designs in divisions
+ -- add the wrong sound and touch sound 
+ -- create a desing in the buttons of the template in html
+
+-->
+        </section>
+    </main>
+
+    <script src="Programming.js"></script>
+    <script src="/trailingMouseEffect/trailingMouse.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/trailingMouseEffect/trailsEffect.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* background-color: rgb(3, 174, 210);
+    
+        background-image: linear-gradient(to left, rgb(3, 174, 210), rgb(6, 214, 255));
+        
+        */
+        body {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-image: linear-gradient(to left, rgb(3, 174, 210), rgb(4, 96, 114));
+        }
+
+
+        .login {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: space-between;
+            background-image: linear-gradient(to left, rgb(3, 174, 210), rgb(6, 214, 255));
+            width: 25%;
+            border-radius: 15px;
+            height: 70%;
+
+            box-shadow: .5px 2px 8px rgba(51, 50, 50, 0.25);
+            color: rgb(3, 174, 210);
+        }
+
+
+        /*
+        
+      
+
+        div>input {
+            border-radius: 20px;
+            border: none;
+            color: var(--text-color);
+            width: 70%;
+            font-size: 20px;
+            height: 40px;
+            text-align: center;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.443);
+            background-color: rgba(0, 0, 0, 0);
+            border-top: .1px solid rgb(255, 255, 255);
+            border-left: .1px solid rgb(255, 255, 255);
+
+        }
+        */
+
+        div>input {
+            background-color: rgb(254, 239, 173);
+            border: 1ex solid none;
+            border-top-width: 1.7em;
+            border-color: rgb(254, 239, 173);
+            margin: 0;
+            padding: 0;
+            color: #00bbff;
+            word-wrap: break-word;
+            outline: 2px solid rgb(253, 222, 85);
+            width: 600px;
+            height: 30px;
+            border-radius: 10px;
+            font-size: 17px;
+            text-align: center;
+            transition: all .5s;
+            max-width: 190px;
+            font-weight: bold;
+            box-shadow: .5px 5px 5px rgba(1, 10, 19, 0.326);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        div>input:hover {
+            border-top-width: 0.2em;
+            background-color: #f1e8e8;
+        }
+
+        div>input:focus {
+            border-top-width: 0.2em;
+            background-color: #f1e8e8;
+        }
+
+
+        #buttonDone {
+            font-size: 12px;
+            width: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            margin-bottom: 40px;
+            color: #000;
+            background-color: rgb(3, 174, 210);
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 8px 7px rgba(1, 10, 19, 0.326);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+
+        }
+
+        #buttonDone:hover {
+            background-color: rgb(253, 222, 85);
+            box-shadow: 0px 15px 20px rgb(254, 239, 173);
+            color: rgb(255, 255, 255);
+            transform: translateY(-7px);
+        }
+
+
+        button {
+            padding: 1.3em 3em;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-top: 20px;
+            font-weight: 500;
+            color: #000;
+            background-color: rgb(253, 222, 85);
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 8px 7px rgba(1, 10, 19, 0.326);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: rgb(3, 174, 210);
+            box-shadow: 0px 15px 20px rgb(254, 239, 173);
+            color: rgb(0, 0, 0);
+            transform: translateY(-7px);
+        }
+
+
+        button:active,
+        #buttonDone:active {
+            transform: translateY(-1px);
+        }
+
+        /*
+        #musicButton {
+            width: 130px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            border-top: 1px solid white;
+            border-left: 1px solid white;
+            border-radius: 20px;
+            box-shadow: 2px 2px 4px black;
+            color: white;
+        }
+
+        #musicButton:hover {
+            opacity: .7;
+            cursor: pointer;
+        }
+
+        #musicButton:active {
+            opacity: .2;
+        }
+
+       */
+        div>h1 {
+            color: rgb(255, 255, 255);
+            font-size: 40px;
+            text-align: center;
+            font-weight: 600;
+            text-wrap: wrap;
+        }
+
+        div>input:hover {
+            opacity: 0.5;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .container {
+            --light: rgb(255, 255, 255);
+            --dark: rgb(50, 50, 50);
+            --br: 8px;
+        }
+
+        .container:hover .title {
+            opacity: 1;
+        }
+
+        .input {
+            background-color: transparent;
+            border: 2px solid white;
+            color: black;
+            max-width: 200px;
+            padding: .5rem;
+            border-radius: var(--br);
+            outline: none;
+            opacity: .8;
+            transition: .2s ease-in-out;
+        }
+
+        .input:focus {
+            opacity: 1;
+        }
+
+        .title {
+            border-radius: var(--br);
+            transform: translate(-50%, -150%);
+            background-color: var(--light);
+            transition: .2s ease-in-out;
+            opacity: 0;
+            color: var(--dark);
+            position: absolute;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            padding: .5rem;
+            left: 50%;
+        }
+
+        .title::before {
+            transform: translate(-50%, 50%) rotate(45deg);
+            background-color: var(--light);
+            position: absolute;
+            z-index: -1;
+            content: '';
+            width: 10px;
+            height: 10px;
+            bottom: 0;
+            left: 50%;
+        }
+    </style>
+    <link rel="stylesheet" href="/BackgroundDesign/designs.css">
+</head>
+
+<body>
+
+
+
+
+    <audio id="audio" loop>
+        <source src="/GameSounds/loginSounds/mixkit-sicilian-coffee-613.mp3" type="audio/mpeg">
+        <source src="/GameSounds/loginSounds/mixkit-sicilian-coffee-613.mp3" type="audio/ogg">
+    </audio>
+
+    <div class="login">
+        <h1>Welcome to Trigger Game</h1>
+        <div class="container">
+            <div class="title">Nickname</div>
+            <input placeholder="Nickname" id="input" class="input" name="text" type="text">
+        </div>
+        <button id="musicButton"> Play music</button>
+        <a href="/Home/home.html" target="_self">
+            <h1 id="buttonDone">Done</h1>
+        </a>
+    </div>
+
+
+
+
+    <script src="touchSound.js"></script>
+    <script src="/trailingMouseEffect/trailingMouse.js"></script>
+    <script src="login.js"></script>
+    <script>
+        document.addEventListener('load', function () {
+            let music = document.getElementById('audio');
+            music.paused();
+        })
+        document.getElementById('musicButton').addEventListener('click', function () {
+            let music = document.getElementById('audio');
+            music.play();
+        })
+    </script>
+
+</body>
+
+<!--
+   
+    <script src="/trailingMouseEffect/trailingMouse.js"></script>
+
+-->
+
+</html>
